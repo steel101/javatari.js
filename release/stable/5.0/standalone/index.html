@@ -20,27 +20,11 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <link rel="apple-touch-icon" sizes="512x512" href="images/logo-icon512.png">
 
-        <meta property="og:type"         content="website">
-        <meta property="og:url"          content="https://javatari.org">
-        <meta property="og:title"        content="Javatari - The online Atari 2600 emulator">
-        <meta property="og:description"  content="Play Atari 2600 games in your browser, phone or tablet!">
-        <meta property="og:image"        content="https://javatari.org/images/javatari-logo-large.png">
-
-        <meta name="twitter:card"        content="summary">
-        <meta name="twitter:site"        content="@ppeccin">
-        <meta name="twitter:creator"     content="@ppeccin">
-        <meta name="twitter:url"         content="https://javatari.org">
-        <meta name="twitter:title"       content="Javatari - The online Atari 2600 emulator">
-        <meta name="twitter:description" content="Play Atari 2600 games in your browser, phone or tablet!">
-        <meta name="twitter:image"       content="https://javatari.org/images/javatari-logo-large.png">
-
+        
+        
         <script>
 
             JavatariFullScreenSetup = { apply: function fullScreenSetup() { /* Setup Basic full-screen CSS*/ if (!this.cssApplied) { var style = document.createElement('style'); style.type = 'text/css'; style.innerHTML = this.css; document.head.appendChild(style); this.cssApplied = true; } /* Apply Standalone mode full-screen basic styles to html and body immediately if needed*/ document.documentElement.classList.toggle("jt-full-screen", this.shouldStartInFullScreen()); }, shouldStartInFullScreen: function () { return window.Javatari ? Javatari.SCREEN_FULLSCREEN_MODE === 1 || (Javatari.SCREEN_FULLSCREEN_MODE === -1 && this.isBrowserStandaloneMode()) : this.isBrowserStandaloneMode(); }, isBrowserStandaloneMode: function () { return navigator.standalone || window.matchMedia("(display-mode: standalone)").matches; }, css: '' + 'html.jt-full-screen, html.jt-full-screen body {' + '   background: black;' + '}' + 'html.jt-full-screen .jt-full-screen-hidden {' + '   display: none;' + '}' + 'html:not(.jt-full-screen) .jt-full-screen-only {' + '   display: none;' + '}'}; JavatariFullScreenSetup.apply();
-
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-31008590-1', 'auto'); ga('send', 'pageview');
-
-            function donate() { alert("To support the project, please send Paypal donations to:\n\nppeccin@gmail.com\n\nOr contact via email. Many thanks!\n") }
 
         </script>
 
@@ -331,15 +315,6 @@ jt.Images.urls.muteIcon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAoC
             </div>
         </div>
 
-        <div id="keywords" style="display: none;">
-            Javatari - The online Atari 2600 emulator,
-            Play Atari 2600 games online in your browser,
-            Javascript HTML5 Atari 2600 Emulator,
-            Javatari.js, Javatari.thml, javatari.js, javatari.thml,
-            ROM, ROMS,
-            Touch Screen, Mobile, Tablet, Android, iPhone, iPad, iPod, iOS,
-            App, offline, add to home screen
-        </div>
 
         <div id="javatari">
             <div id="javatari-screen"></div>
@@ -356,10 +331,8 @@ jt.Images.urls.muteIcon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAoC
         <div id="footer-space"></div>
         <div id="footer">
             <div class="container">
-                <p><span>Created by <a href="http://twitter.com/ppeccin" target="_blank">Paulo A. Peccin</a></span>
-                    <span class="toright">Atari, VCS and the Atari logo are shown here as a tribute.</span></p>
-                <p><span>v5.0.4 &nbsp;<a href="https://github.com/ppeccin/javatari.js" target="_blank">Docs & Project Home</a></span>
-                    <span class="toright">All trademarks are property of their respective owners.</span></p>
+                <span class="toright">Atari, VCS and the Atari logo are shown here as a tribute.</span></p>
+                <span class="toright">All trademarks are property of their respective owners.</span></p>
             </div>
         </div>
 
